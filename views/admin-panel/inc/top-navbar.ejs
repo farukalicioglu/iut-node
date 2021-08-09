@@ -1,0 +1,95 @@
+<nav class="navbar header-navbar pcoded-header">
+  <div class="navbar-wrapper">
+    <div class="navbar-logo">
+      <a href="index.html">
+        <img class="img-fluid" src="../iu_logo-240.png" width="40" alt="logo" />
+      </a>
+      <a class="mobile-menu" id="mobile-collapse" href="#!">
+        <i class="feather icon-menu icon-toggle-right"></i>
+      </a>
+      <a class="mobile-options waves-effect waves-light">
+        <i class="feather icon-more-horizontal"></i>
+      </a>
+    </div>
+    <div class="navbar-container container-fluid">
+      <ul class="nav-left">
+        <li class="header-search">
+          <div class="main-search morphsearch-search">
+            <div class="input-group">
+              <span class="input-group-prepend search-close">
+                <i class="feather icon-x input-group-text"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="aradığınız kelimeyi girin">
+              <span class="input-group-append search-btn">
+                <i class="feather icon-search input-group-text"></i>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#!" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:toggleFullScreen()" class="waves-effect waves-light" data-cf-modified-440a036471b8061ee9466ce4-="">
+            <i class="full-screen feather icon-maximize"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-right">
+        <li class="header-notification">
+          <div class="dropdown-primary dropdown">
+            <div class="dropdown-toggle" data-toggle="dropdown">
+              <i class="feather icon-bell"></i>
+            </div>
+            <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+              <li>
+                <h6>Notifications</h6>
+                <label class="label label-danger">New</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="header-notification">
+          <div class="dropdown-primary dropdown">
+            <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+              <i class="feather icon-message-square"></i>
+            </div>
+          </div>
+        </li>
+        <li class="user-profile header-notification">
+          <div class="dropdown-primary dropdown">
+            <div class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../jpg/avatar-4.jpg" class="img-radius" alt="<%=user.name%>">
+              <span><%=user.name%></span>
+              <i class="feather icon-chevron-down"></i>
+            </div>
+            <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+              <li>
+                <a href="#!">
+                  <i class="feather icon-settings"></i> ayarlar
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="feather icon-user"></i> profil
+                </a>
+              </li>
+              <li>
+                <a href="email-inbox.html">
+                  <i class="feather icon-mail"></i> mesajlar
+                </a>
+              </li>
+              <li>
+                <a href="auth-lock-screen.html">
+                  <i class="feather icon-lock"></i> ekranı kilitle
+                </a>
+              </li>
+              <li>
+                <a href="../logout">
+                  <i class="feather icon-log-out"></i> çıkış
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

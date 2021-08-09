@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%=title%> - İstanbul Ultra Trail</title>
+  </head>
+  <body bgcolor="#666"><div style="width:100%;padding:20px;text-align:center;font-size:14px;">
+      <h1>all pages</h1>
+
+      <% pages.forEach(page => { %>
+      <strong>title:</strong> <a href="<%=page.url%>"><%=page.titleTr%></a> <br />
+      <strong>url:</strong> <%=page.url%> <br />
+      <strong>ejsFile:</strong> <%=page.ejsFile%> <br />
+      <a class="delete-this-page" data-doc="<%=page._id%>" style="color:red;cursor:pointer;">** Sil **</a><br />
+      <hr />
+      <% }) %>
+    </div>
+
+    <script>
+      const del = document.querySelectorAll('a.delete-this-page')
+      const delLinks=[].slice.call(del)
+
+      delLinks.forEach((item, i) => {
+        item.addEventListener('click', (e) => {
+          const endpoint = `/admin/delete/${item.dataset.doc}`
+
+          fetch(endpoint, {
+            method: 'DELETE'
+          })
+          .then((response) => response.json())
+          .then((data) => window.location.href = data.link)
+          .catch((err) => {
+            console.log(err)
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
